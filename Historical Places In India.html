@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body {
+      background-color: rgb(8, 8, 8);
+      color: white;
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    .navigation {
+      font-size: 17px;
+      display: flex;
+
+    }
+
+    li {
+      list-style: none;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding: 33px 25px;
+    }
+      header::before {
+      content: "";
+      background: url("https://source.unsplash.com/user/erondu/1600x900")no-repeat center center/cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    section {
+      margin: 5px 23px;
+      /* border: 4px solid red; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      height: 344px;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    p {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .navbar {
+      /* background-color: black; */
+      color: White;
+      border-radius: 40px;
+      /* text-decoration: none; */
+
+    }
+
+    .navbar li {
+      float: left;
+      list-style: none;
+      padding: 15px;
+    }
+
+    .navbar li a:hover {
+
+      color: red;
+    }
+
+    .navbar ul {
+      overflow: auto;
+      margin: 13px 20px;
+      /* cursor:pointer;  */
+
+    }
+
+    .navbar li a {
+      padding: 4px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .search {
+      float: right;
+      padding: 12px 80px;
+      margin: auto 100px;
+      margin-left: auto;
+
+    }
+
+    #search {
+      border-radius: 20px;
+      border: 2px solid rgb(207, 180, 4);
+      text-align: center;
+    }
+
+    .flag {
+      background-image: linear-gradient(red, white, green);
+      width: 400px;
+      text-align: center;
+      margin: auto;
+      color: rgb(62, 60, 60);
+    }
+
+    section h1 {
+      margin: 30px 0 20px 0;
+      font-size: 55px;
+      font-weight: 700;
+      text-shadow: 2px 1px 5px black;
+      text-transform: uppercase;
+      color: rgb(255, 255, 255);
+    }
+
+    .change_content:after {
+      content: "";
+      animation: changetext 10s infinite linear;
+      color: #ad2188;
+    }
+
+    @keyframes changetext {
+      0% {
+        content: "Taj Mahal";
+      }
+
+      20% {
+        content: "Khajuraho Temples";
+      }
+
+      35% {
+        content: "Meenakshi Amman Temple";
+      }
+
+      60% {
+        content: "Elephanta Caves";
+      }
+
+      80% {
+        content: "Golden Temple";
+      }
+
+      100% {
+        content: "Mysore Palace";
+      }
+    }
+
+    .taj-img {
+      height: 500px;
+      width: 900px;
+      margin-left: 280px;
+      justify-content: center;
+    }
+
+    section .all {
+      background-image: -moz-linear-gradient(col);
+    }
+
+    #all {
+      background-image: -moz-linear-gradient(red, green, blue);
+    }
+
+    /* footer {
+      padding-top: 40px;
+      color: rgb(205, 27, 27);
+      background-color: #63d5bc;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer-content h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 3rem;
+    }
+
+    .socials {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0 3rem 0;
+    }
+
+    .socials li {
+      margin: 0 10px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: #ffff;
+    }
+
+    .socials a i {
+      font-size: 2rem;
+      transition: color .4s ease;
+    }
+
+    .footer-bottom {
+      padding: 20px 0;
+    }
+
+    #facebook:hover {
+      color: #003db8;
+    }
+
+    #instagram:hover {
+      color: #bc1888;
+    }
+
+    #linkedin:hover {
+      color: #1ea2da;
+    }
+
+    #youtube:hover {
+      color: #dd3c3c;
+    }
+
+    #google:hover {
+      color: #fd1919;
+    }
+
+    #twitter:hover {
+      color: #23b6f0;
+    }
+  </style> */
+</head>
+
+<body>
+  <header>
+    <h1>HISTORICAL PLACES OF INDIA</h1>
+    <nav class="navbar">
+      <ul class="navigation">
+        <!-- <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li> -->
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <div class="search">
+          <input type="text" id="search" placeholder="Search Here">
+
+      </ul>
+    </nav>
+  </header>
+ 
+  <section align="center">
+    <h1>
+      DO COME & VISIT @ <span class="change_content"> </span>
+      <span style="margin-top: -10px"> </span>
+    </h1>
+  </section>
+  <div class="flag">
+    <h1>WELCOME TO INDIA</h1>
+  </div>
+  <h3>Historical Places In India That You Will Find Extremely Fascinating It’s hardly an exaggeration to say that
+    India’s civilization is one of the oldest in the world. All throughout its history, it has witnessed the rise and
+    fall of several kings, dynasties, and empires. Each of those in power, however, left behind their legacy in the form
+    of a monument, maybe a fort, palace, or any other historical structure. And thus, we have a list of the top
+    historical places in India in this post.</h3>
+
+
+
+  <br> <br> <br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <span>
+    <div id="all">
+      <section class="all">
+        <div class="first">
+          <div>
+            <section class="Taj">
+              <div class="tajmahal">
+                <div class="header" align="center">
+                  <h1><b>Taj Mahal , Delhi</b></h1>
+                </div>
+                <br />
+                <a href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank"><img class="taj-img"
+                    src="tajmahal.jpg" alt="" /></a>
+                <div class="info" align="center">
+
+                  <p>
+                    <!-- <details> -->
+                    One of the most famous historical sites in India, the Taj Mahal
+                    of Agra dates back to the 17th century. It was built by Shah
+                    Jahan, the Mughal emperor, in the memory of Mumtaz Mahal, his
+                    third wife. It is also the abode of the tomb of Shah Jahan
+                    himself.
+
+
+
+                    The Taj Mahal has intricate carvings and is made entirely of
+                    white marble, on the southern banks of the Yamuna River. It is
+                    also one of the Seven Wonders of the World.
+
+
+                    <b>Entry fee </b>: INR 45 (Indians), INR 1,050 (foreigners), INR
+                    535 (SAARC and BIMSTEC), INR 200 (for every tourist who wishes
+                    to enter the mausoleum), FREE (for children below 15 years)
+
+
+                    <br><br><br><br>
+                    <b>Timings:</b> 06:00 a.m. to 06:30 p.m. (Closed on Fridays)</b>
+                  </p>
+                </div>
+              </div>
+          </div>
+      </section>
+    </div>
+
+    <div>
+      <section class="Taj">
+        <div class="tajmahal">
+          <div class="header" align="center">
+            <h2><b>
+
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                2)</b> Khajuraho Temples, Madhya Pradesh</h2>
+          </div>
+          <br />
+          <a href="https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments" target="_blank">
+            <img class="taj-img" src="temple.webp" alt="" /></a>
+          <div class="info" align="center">
+            <!-- <details> -->
+
+            <p>
+              The famous Khajuraho Temples in Madhya Pradesh are amongst the
+              top 10 historical places in India, popular for being home to a
+              total of 85 Hindu and Jain temples, spread across three
+              complexes. It is here where you can see intricate rock carvings
+              portraying dance, music, passion and eroticism, in addition to
+              learning about the rich culture of the region during the
+              medieval period.
+
+
+              The Khajuraho Temples date back to the 12th century, and are
+              recognized as UNESCO World Heritage Sites.
+
+
+              <b>Entry fee </b>: INR 40 (Indians), INR 600 (Foreigners); INR
+              40 (SAARC and BIMSTEC), FREE (for children below 15 years))
+            </p>
+
+            <p><b>Timings:</b> 06:00 a.m. to 06:00 p.m.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div>
+      <section class="Taj">
+        <div class="tajmahal">
+          <div class="header" align="center">
+            <h2><b>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                3)</b> Meenakshi Amman Temple, Tamil Nadu</h2>
+          </div>
+          <br />
+          <a href="https://en.wikipedia.org/wiki/Meenakshi_Temple,_Madurai" target="_blank">
+            <img class="taj-img" src="temple2.jpg" alt="" /></a>
+          <div class="info" align="center">
+
+            <p>
+              Built in the Dravidian style of architecture, the Meenakshi
+              Amman Temple ranks as one of the most beautiful ancient places
+              in India. Built in the early 17th century, the temple is located
+              on the southern banks of the Vaigai river in Madurai, Tamil
+              Nadu. Also known as the Sri Meenakshi Temple, this temple is
+              primarily dedicated to Goddess Parvati and Lord Shiva.
+
+
+              The most striking part of the temple, however, is that both the
+              god and goddess are worshipped together here. From minute
+              details, art pieces in the pillars and walls, to 14 gateway
+              towers called gopurams, and more, you can see it all at the
+              Meenakshi Amman Temple.
+
+
+            <p><b>Timings:</b> 09:00 a.m. to 07:00 p.m.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div>
+      <section class="Taj">
+        <div class="tajmahal">
+          <div class="header" align="center">
+            <h2><b>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                4)</b> Elephanta Caves, Maharashtra</h2>
+          </div>
+          <br />
+          <a href="https://en.wikipedia.org/wiki/Elephanta_Caves" target="_blank">
+            <img class="taj-img" src="temple3.jpg" alt="" /></a>
+          <div class="info" align="center">
+
+
+
+            <p>
+              A UNESCO World Heritage Site, the Elephanta Caves, located on
+              the Gharapuri Island around 11 kilometres from Mumbai, is
+              another one of the top historical places in India. Considered to
+              be one of the most beautiful specimens of rock-cut art and
+              architecture, dating back to the medieval times, these caves
+              today are merely the remnants of what used to be elaborate
+              artworks.
+
+
+              The caves are accessible by a ferry ride from the Gateway of
+              India in Mumbai and are home to cave temples that date back from
+              the 5th to 7th centuries.
+
+
+              <b>Entry fee </b>: INR 40 (Indians), INR 250 (Foreigners); INR
+              40 (SAARC and BIMSTEC), FREE (for children below 15 years)
+
+            <p>
+              </details><b>Timings:</b> 09:00 a.m. to 05:30 p.m.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+    <div>
+      <section class="Taj">
+        <div class="tajmahal">
+          <div class="header" align="center">
+            <h2><b>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                5)</b> Golden Temple, Punjab</h2>
+          </div>
+          <br />
+          <a href="https://en.wikipedia.org/wiki/Golden_Temple" target="_blank">
+            <img class="taj-img" src="temple4.jpg" alt="" /></a>
+          <div class="info" align="center">
+
+            <p>
+              world-famous Golden Temple, located in the city of Amritsar in
+              Punjab. Also known as Sri Harmandir Sahib, the Golden temple is
+              the most important religious site for the Sikhs, and celebrates
+              humanity, tranquillity and brotherhood.
+
+
+              Spread across two storeys, the gurdwara has a unique domed
+              architecture, with the dome-part of it completely covered in
+              pure gold, while the other half is made out of white marble.
+
+
+              In addition to seeing major attractions like the Akal Takht,
+              Sikh History Museum, Clock Tower and the Teja Singh Samundri
+              Hall, you can also enjoy the daily Langar here, which attracts
+              thousands of devotees and visitors every day.
+
+
+            <p><b>Timings:</b> 09:00 a.m. to 07:00 p.m.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div>
+      <section class="Taj">
+        <div class="tajmahal">
+          <div class="header" align="center">
+            <h2><b>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                6)</b> Mysore Palace, Karnataka</h2>
+          </div>
+          <br />
+          <a href="https://en.wikipedia.org/wiki/Mysore_Palace" target="_blank">
+            <img class="taj-img" src="temple5.jpg" alt="" /></a>
+          <div class="info" align="center">
+
+            <p>
+              Boasting of the grand Indo-Saracenic style of architecture, the
+              Mysore Palace, located in the city of Mysore in Karnataka,
+              remains one of the most popular historical sites in the country.
+              Complete with opulent domes, gardens, arches, turrets as well as
+              colonnades, the palace was the former residence of the royal
+              family of Mysore..
+
+              As of today, in addition to being their official residence, the
+              palace also serves as a museum, where you can find many
+              paintings, royal outfits and costumes, jewellery and a lot more.
+
+              Entry fee </b>: INR 70 (Indians), INR 70 (Foreigners), INR 30
+              (Children between 10 to 18 years), FREE (for children below 10
+              years)
+
+              </details>
+            <p><b>Timings:</b> 10:00 a.m. to 05:30 p.m.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </span>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+  </section>
+  </div>
+  /* <footer>
+    <div class="footer-content">
+      <h3>Designed And Developed By PRAJYOT WALUNJ</h3>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook" id="facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter" id="twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus" id="google"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube" id="youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square" id="linkedin"></i></a></li>
+        <li><a href="#"><i class="fa fa-instagram" id="instagram"></i></a></li>
+      </ul>
+    </div>
+    <br><br><br><br>
+  </footer> */
+</body>
+</html>
